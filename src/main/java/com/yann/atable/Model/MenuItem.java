@@ -18,11 +18,9 @@ public class MenuItem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
     private String nom;
     private Double prix;
     private String description;
-
     @Enumerated(EnumType.STRING)
     private MenuItemType type;
 

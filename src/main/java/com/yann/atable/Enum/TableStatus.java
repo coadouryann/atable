@@ -1,4 +1,4 @@
-package com.yann.atable.Enums;
+package com.yann.atable.Enum;
 
 public enum TableStatus {
     DISPONIBLE,

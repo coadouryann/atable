@@ -1,7 +1,8 @@
-package com.yann.atable.Models;
+package com.yann.atable.Model;
 
-import com.yann.atable.Enums.MenuItemType;
+import com.yann.atable.Enum.MenuItemType;
 import jakarta.persistence.*;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -12,8 +13,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "menuItems")
-public class MenuItems {
+@Table(name = "_menuItem")
+public class MenuItem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

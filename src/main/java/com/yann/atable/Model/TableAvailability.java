@@ -1,6 +1,6 @@
-package com.yann.atable.Models;
+package com.yann.atable.Model;
 
-import com.yann.atable.Enums.TableStatus;
+import com.yann.atable.Enum.TableStatus;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -12,19 +12,19 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "TableAvailabilities")
-public class TableAvailabilities {
+@jakarta.persistence.Table(name = "_TableAvailability")
+public class TableAvailability {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @ManyToOne
     @JoinColumn(name="id_table")
-    private Tables table;
+    private Table table;
 
     @ManyToOne
     @JoinColumn(name="id_service")
-    private Services service;
+    private Service service;
 
     @Enumerated(EnumType.STRING)
     private TableStatus status;

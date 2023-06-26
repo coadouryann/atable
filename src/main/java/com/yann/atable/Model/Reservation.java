@@ -1,4 +1,4 @@
-package com.yann.atable.Models;
+package com.yann.atable.Model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -11,23 +11,23 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "reservations")
-public class Reservations {
+@jakarta.persistence.Table(name = "_reservation")
+public class Reservation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @ManyToOne
     @JoinColumn(name="id_client")
-    private Users client;
+    private User client;
 
     @ManyToOne
     @JoinColumn(name="id_service")
-    private Services service;
+    private Service service;
 
     @ManyToOne
     @JoinColumn(name="id_table")
-    private Tables table;
+    private Table table;
 
     private Integer nombreDePersonnes;
 }
